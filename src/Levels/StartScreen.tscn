@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://pywb6dh2hb5a"]
+
+[ext_resource type="PackedScene" uid="uid://j8l4ped64oul" path="res://src/UI/Menu.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://cr32cu77m4dt5" path="res://src/Levels/Level1.tscn" id="2"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Menu" parent="UI" instance=ExtResource("1")]
+anchors_preset = 15
+offset_top = -7.0
+offset_bottom = -7.0
+first_scene = ExtResource("2")

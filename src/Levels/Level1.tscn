@@ -1,0 +1,283 @@
+[gd_scene load_steps=29 format=3 uid="uid://cr32cu77m4dt5"]
+
+[ext_resource type="AudioStream" uid="uid://cb2motminbb0h" path="res://assets/sounds/Game loops 3.wav" id="1"]
+[ext_resource type="Texture2D" uid="uid://c4gi647x66xxb" path="res://assets/backgrounds/day_scaled.png" id="2"]
+[ext_resource type="PackedScene" uid="uid://cy2k4kbb4j6d2" path="res://src/Objects/Seedling.tscn" id="3"]
+[ext_resource type="Texture2D" uid="uid://cp6sd5oskt8iu" path="res://assets/box_small.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://bxek7obi1oeid" path="res://assets/boulders/boulder_small.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://c8scfxgnvfy8f" path="res://assets/transparent.png" id="6"]
+[ext_resource type="PackedScene" uid="uid://c5rb0ao573ge2" path="res://src/Objects/boulder1.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://dabpr2m0uurjj" path="res://src/Objects/Boulder2.tscn" id="8"]
+[ext_resource type="PackedScene" uid="uid://bh2h6i8c0o1yp" path="res://src/Actors/Steve.tscn" id="9"]
+[ext_resource type="PackedScene" uid="uid://m4ljupqhk5wo" path="res://src/Objects/Scaffolding.tscn" id="10"]
+[ext_resource type="PackedScene" uid="uid://k1wtkrjy574c" path="res://src/Objects/Box.tscn" id="11"]
+[ext_resource type="PackedScene" uid="uid://uk7dbgvocn1n" path="res://src/Actors/Player.tscn" id="12"]
+[ext_resource type="PackedScene" uid="uid://bpvy3xyfq5xu0" path="res://src/Objects/Portal.tscn" id="13"]
+[ext_resource type="PackedScene" uid="uid://g2npjb6ck6xb" path="res://src/Levels/Level2.tscn" id="14"]
+[ext_resource type="PackedScene" uid="uid://df5p7k6rwfv84" path="res://src/Objects/Seed.tscn" id="15"]
+[ext_resource type="PackedScene" path="res://src/Triggers/DialogTrigger.tscn" id="16"]
+[ext_resource type="PackedScene" path="res://src/Controllers/DialogController.tscn" id="17"]
+[ext_resource type="Texture2D" uid="uid://l0sxlni0op6w" path="res://assets/ui/dialog_rolph_2.png" id="18"]
+[ext_resource type="Texture2D" uid="uid://dva6ahjtor7xw" path="res://assets/ui/dialog_rolph_1.png" id="19"]
+[ext_resource type="Texture2D" uid="uid://cr7lee4kh7it0" path="res://assets/ui/dialog_douglas_2.png" id="20"]
+[ext_resource type="Texture2D" uid="uid://drxsau00vqg47" path="res://assets/ui/dialog_narrator.png" id="21"]
+[ext_resource type="PackedScene" path="res://src/UI/HUD.tscn" id="22"]
+[ext_resource type="PackedScene" path="res://src/UI/GameOver.tscn" id="23"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mqe3"]
+texture = ExtResource("4")
+texture_region_size = Vector2i(74, 80)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-37, -40, 37, -40, 37, 40, -37, 40)
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/1/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/1/physics_layer_0/angular_velocity = 0.0
+0:0/1/physics_layer_0/polygon_0/points = PackedVector2Array(37, -40, -37, -40, -37, 40, 37, 40)
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/2/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/2/physics_layer_0/angular_velocity = 0.0
+0:0/2/physics_layer_0/polygon_0/points = PackedVector2Array(-37, 40, 37, 40, 37, -40, -37, -40)
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/3/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/3/physics_layer_0/angular_velocity = 0.0
+0:0/3/physics_layer_0/polygon_0/points = PackedVector2Array(37, 40, -37, 40, -37, -40, 37, -40)
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/4/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/4/physics_layer_0/angular_velocity = 0.0
+0:0/4/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -37, -40, 37, 40, 37, 40, -37)
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/5/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/5/physics_layer_0/angular_velocity = 0.0
+0:0/5/physics_layer_0/polygon_0/points = PackedVector2Array(40, -37, 40, 37, -40, 37, -40, -37)
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/6/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/6/physics_layer_0/angular_velocity = 0.0
+0:0/6/physics_layer_0/polygon_0/points = PackedVector2Array(-40, 37, -40, -37, 40, -37, 40, 37)
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+0:0/7/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/7/physics_layer_0/angular_velocity = 0.0
+0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(40, 37, 40, -37, -40, -37, -40, 37)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3mecd"]
+texture = ExtResource("5")
+texture_region_size = Vector2i(148, 80)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4ec57"]
+texture = ExtResource("6")
+texture_region_size = Vector2i(74, 80)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-37, -40, 37, -40, 37, 40, -37, 40)
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/1/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/1/physics_layer_0/angular_velocity = 0.0
+0:0/1/physics_layer_0/polygon_0/points = PackedVector2Array(37, -40, -37, -40, -37, 40, 37, 40)
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/2/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/2/physics_layer_0/angular_velocity = 0.0
+0:0/2/physics_layer_0/polygon_0/points = PackedVector2Array(-37, 40, 37, 40, 37, -40, -37, -40)
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/3/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/3/physics_layer_0/angular_velocity = 0.0
+0:0/3/physics_layer_0/polygon_0/points = PackedVector2Array(37, 40, -37, 40, -37, -40, 37, -40)
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/4/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/4/physics_layer_0/angular_velocity = 0.0
+0:0/4/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -37, -40, 37, 40, 37, 40, -37)
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/5/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/5/physics_layer_0/angular_velocity = 0.0
+0:0/5/physics_layer_0/polygon_0/points = PackedVector2Array(40, -37, 40, 37, -40, 37, -40, -37)
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/6/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/6/physics_layer_0/angular_velocity = 0.0
+0:0/6/physics_layer_0/polygon_0/points = PackedVector2Array(-40, 37, -40, -37, 40, -37, 40, 37)
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+0:0/7/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/7/physics_layer_0/angular_velocity = 0.0
+0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(40, 37, 40, -37, -40, -37, -40, 37)
+
+[sub_resource type="TileSet" id="4"]
+tile_size = Vector2i(74, 80)
+physics_layer_0/collision_layer = 9
+physics_layer_0/collision_mask = 9
+sources/0 = SubResource("TileSetAtlasSource_7mqe3")
+sources/1 = SubResource("TileSetAtlasSource_3mecd")
+sources/2 = SubResource("TileSetAtlasSource_4ec57")
+
+[sub_resource type="RectangleShape2D" id="5"]
+size = Vector2(13.856, 10)
+
+[node name="level" type="Node2D"]
+position = Vector2(1634, 539)
+
+[node name="background_music" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("1")
+autoplay = true
+
+[node name="background" type="TextureRect" parent="."]
+offset_left = -1907.0
+offset_top = -998.0
+offset_right = 13845.0
+offset_bottom = 640.0
+texture = ExtResource("2")
+stretch_mode = 1
+
+[node name="Seedling" parent="." instance=ExtResource("3")]
+position = Vector2(3707, 483)
+scale = Vector2(0.7, 0.7)
+
+[node name="Seedling2" parent="." instance=ExtResource("3")]
+position = Vector2(5256, 483)
+scale = Vector2(0.7, 0.7)
+
+[node name="Seedling3" parent="." instance=ExtResource("3")]
+position = Vector2(7934, 483)
+scale = Vector2(0.7, 0.7)
+
+[node name="Seedling4" parent="." instance=ExtResource("3")]
+position = Vector2(8244, 483)
+scale = Vector2(0.7, 0.7)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("4")
+format = 2
+layer_0/tile_data = PackedInt32Array(-851816, 0, 0, -720918, 0, 0, -786280, 0, 0, -655382, 0, 0, -720744, 0, 0, -589846, 0, 0, -655208, 0, 0, -524310, 0, 0, -589672, 0, 0, -458774, 0, 0, -524136, 0, 0, -393238, 0, 0, -458600, 0, 0, -327702, 0, 0, -393064, 0, 0, -262166, 0, 0, -327528, 0, 0, -196630, 0, 0, -261992, 0, 0, -131094, 0, 0, -196456, 0, 0, -65558, 0, 0, -130920, 0, 0, -22, 0, 0, -65384, 0, 0, 65514, 0, 0, 152, 0, 0, 131050, 0, 0, 65688, 0, 0, 196586, 0, 0, 131224, 0, 0, 262122, 0, 0, 196760, 0, 0, 327658, 0, 0, 262209, 0, 0, 262296, 0, 0, 393194, 0, 0, 327740, 0, 0, 327745, 0, 0, 327832, 0, 0)
+
+[node name="boulder1" parent="." instance=ExtResource("7")]
+position = Vector2(2034, 399)
+
+[node name="boulder2" parent="." instance=ExtResource("7")]
+position = Vector2(5841, 427)
+scale = Vector2(0.5, 0.5)
+
+[node name="boulder3" parent="." instance=ExtResource("7")]
+position = Vector2(6082, 427)
+scale = Vector2(0.5, 0.5)
+
+[node name="Boulder2" parent="." instance=ExtResource("8")]
+position = Vector2(2948, 399)
+scale = Vector2(0.2, 0.2)
+
+[node name="Boulder3" parent="." instance=ExtResource("8")]
+position = Vector2(7158, 297)
+scale = Vector2(0.4, 0.4)
+
+[node name="Chaser" parent="." instance=ExtResource("9")]
+position = Vector2(-928, 310)
+scale = Vector2(0.5, 0.5)
+max_speed = Vector2(500, 0)
+
+[node name="Scaffolding" parent="." instance=ExtResource("10")]
+position = Vector2(4688, 241)
+
+[node name="Scaffolding2" parent="." instance=ExtResource("10")]
+position = Vector2(10017, 253)
+
+[node name="Scaffolding3" parent="." instance=ExtResource("10")]
+position = Vector2(10421, 249)
+
+[node name="Scaffolding4" parent="." instance=ExtResource("10")]
+position = Vector2(10421, -158)
+
+[node name="Box" parent="." instance=ExtResource("11")]
+position = Vector2(10530, -137)
+scale = Vector2(0.9, 0.9)
+
+[node name="Player" parent="." instance=ExtResource("12")]
+position = Vector2(302, 301)
+
+[node name="Douglas" parent="." instance=ExtResource("13")]
+position = Vector2(10528, -154)
+scale = Vector2(0.3, 0.3)
+next_scene = ExtResource("14")
+
+[node name="Seed" parent="." instance=ExtResource("15")]
+position = Vector2(1141, 423)
+
+[node name="Seed2" parent="." instance=ExtResource("15")]
+position = Vector2(4688, 232)
+
+[node name="Seed3" parent="." instance=ExtResource("15")]
+position = Vector2(6441, 431)
+
+[node name="Seed4" parent="." instance=ExtResource("15")]
+position = Vector2(7333, -31)
+
+[node name="IntroDialogTrigger" parent="." instance=ExtResource("16")]
+position = Vector2(305, 417)
+dialoge_file_path = "res://data/dialogs/01_intro.json"
+
+[node name="TransitonDialogTrigger" parent="." instance=ExtResource("16")]
+position = Vector2(10528, -188)
+scale = Vector2(5, 5)
+dialoge_file_path = "res://data/dialogs/01_transition.json"
+
+[node name="UI" type="CanvasLayer" parent="."]
+layer = 99
+
+[node name="DialogController" parent="UI" instance=ExtResource("17")]
+process_mode = 3
+visible = false
+anchors_preset = 12
+rolph_neutral = ExtResource("18")
+rolph_scared = ExtResource("19")
+douglas_neutral = ExtResource("20")
+narrator = ExtResource("21")
+
+[node name="HUD" parent="UI" instance=ExtResource("22")]
+anchors_preset = 10
+
+[node name="GameOver" parent="UI" instance=ExtResource("23")]
+visible = false
+anchors_preset = 14
+
+[node name="Ground" type="StaticBody2D" parent="."]
+collision_layer = 8
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(0, 491)
+scale = Vector2(2000, 2)
+shape = SubResource("5")
+
+[node name="SeedDialogTrigger" parent="." instance=ExtResource("16")]
+position = Vector2(985, 33)
+scale = Vector2(2, 40)
+dialoge_file_path = "res://data/dialogs/01_seed_tutorial.json"
+
+[node name="SeedlingDialogTrigger" parent="." instance=ExtResource("16")]
+position = Vector2(3290, 16)
+scale = Vector2(2, 40)
+dialoge_file_path = "res://data/dialogs/01_seedling_tutorial.json"

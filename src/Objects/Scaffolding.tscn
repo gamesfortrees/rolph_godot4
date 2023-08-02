@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://m4ljupqhk5wo"]
+
+[ext_resource type="Texture2D" uid="uid://c01cvpl746aha" path="res://assets/structures/scaffolding_small.png" id="1"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(297, 27)
+
+[node name="Scaffolding" type="StaticBody2D"]
+collision_layer = 8
+
+[node name="scaffolding_small" type="Sprite2D" parent="."]
+texture = ExtResource("1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -156.5)
+shape = SubResource("1")
+one_way_collision = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, 64)
+shape = SubResource("1")
+one_way_collision = true

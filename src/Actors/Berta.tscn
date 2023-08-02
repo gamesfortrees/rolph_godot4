@@ -1,0 +1,87 @@
+[gd_scene load_steps=9 format=3 uid="uid://ce0ftkg06hawr"]
+
+[ext_resource type="Script" path="res://src/Actors/Chaser.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://ouwpv4wo2vha" path="res://assets/enemies/machine-big 1.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://mjqbd6g50nu8" path="res://assets/enemies/saw_blade.png" id="3"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(1358, 1092)
+
+[sub_resource type="Animation" id="2"]
+resource_name = "vibrate"
+length = 0.4
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Machine:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 15), Vector2(0, 1.90735e-06), Vector2(0, -15), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qqnil"]
+_data = {
+"vibrate": SubResource("2")
+}
+
+[sub_resource type="Animation" id="3"]
+resource_name = "Saw"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Machine/saw_blade:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 360.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cxo28"]
+_data = {
+"Saw": SubResource("3")
+}
+
+[node name="Chaser" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1")
+max_speed = Vector2(200, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(11, -143)
+shape = SubResource("1")
+
+[node name="Machine" type="Node2D" parent="."]
+position = Vector2(0, -10.2775)
+
+[node name="machine-big 1" type="Sprite2D" parent="Machine"]
+position = Vector2(-31, -163)
+scale = Vector2(0.823489, 0.823489)
+texture = ExtResource("2")
+
+[node name="saw_blade" type="Sprite2D" parent="Machine"]
+position = Vector2(463, 33)
+rotation = 4.39645
+texture = ExtResource("3")
+
+[node name="VibrationAnimation" type="AnimationPlayer" parent="."]
+autoplay = "vibrate"
+libraries = {
+"": SubResource("AnimationLibrary_qqnil")
+}
+
+[node name="SawAnimation" type="AnimationPlayer" parent="."]
+autoplay = "Saw"
+libraries = {
+"": SubResource("AnimationLibrary_cxo28")
+}

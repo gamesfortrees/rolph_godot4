@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5rb0ao573ge2"]
+
+[ext_resource type="Texture2D" uid="uid://cb3n15iys67ox" path="res://assets/boulders/boulder-1.png" id="1"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(494, 207)
+
+[node name="boulder1" type="StaticBody2D"]
+collision_layer = 8
+
+[node name="boulder-1" type="Sprite2D" parent="."]
+texture = ExtResource("1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 3.5)
+shape = SubResource("1")

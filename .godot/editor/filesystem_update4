@@ -1,0 +1,15 @@
+res://src/Objects/Portal.gd
+res://src/Controllers/GameController.gd
+res://src/Objects/Seedling.gd
+res://src/Levels/Level1.tscn
+res://src/Actors/Berta.tscn
+res://src/Actors/Player.tscn
+res://src/Actors/Steve.tscn
+res://src/Actors/Enemy.tscn
+res://src/Actors/Chaser.gd
+res://src/Objects/Fire.tscn
+res://src/Levels/Level2.tscn
+res://src/Levels/Level3.tscn
+res://src/Objects/boulder1.tscn
+res://src/UI/Menu.tscn
+res://src/Levels/StartScreen.tscn

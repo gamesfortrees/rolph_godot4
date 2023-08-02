@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://wvhfvabjykbe"]
+
+[ext_resource type="Texture2D" uid="uid://cloetaqmij4bf" path="res://assets/enemies/fire3.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://bed0xlihpum6y" path="res://assets/enemies/fire2.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://ojj3ysukyybe" path="res://assets/enemies/fire1.png" id="3"]
+
+[sub_resource type="SpriteFrames" id="1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="2"]
+size = Vector2(97, 71)
+
+[sub_resource type="RectangleShape2D" id="3"]
+size = Vector2(61, 45)
+
+[node name="Fire" type="StaticBody2D"]
+collision_layer = 2
+collision_mask = 0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 14)
+sprite_frames = SubResource("1")
+autoplay = "default"
+frame = 2
+frame_progress = 0.895624
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, 29.5)
+shape = SubResource("2")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(5.5, -27.5)
+shape = SubResource("3")
