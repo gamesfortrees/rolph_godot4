@@ -8,7 +8,6 @@
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Menu" parent="UI" instance=ExtResource("1")]
-anchors_preset = 15
 offset_top = -7.0
 offset_bottom = -7.0
 first_scene = ExtResource("2")

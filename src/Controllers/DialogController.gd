@@ -12,7 +12,7 @@ extends MarginContainer
 var current_dialog: Array
 var current_line: int = 0
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if !visible:
 		return
 	if Input.is_action_just_pressed("jump"):

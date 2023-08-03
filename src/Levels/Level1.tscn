@@ -1,8 +1,10 @@
-[gd_scene load_steps=29 format=3 uid="uid://cr32cu77m4dt5"]
+[gd_scene load_steps=31 format=3 uid="uid://cr32cu77m4dt5"]
 
-[ext_resource type="AudioStream" uid="uid://cb2motminbb0h" path="res://assets/sounds/Game loops 3.wav" id="1"]
+[ext_resource type="Script" path="res://src/Levels/Level.gd" id="1_25j8a"]
 [ext_resource type="Texture2D" uid="uid://c4gi647x66xxb" path="res://assets/backgrounds/day_scaled.png" id="2"]
+[ext_resource type="AudioStream" uid="uid://ck37un4wvsqef" path="res://src/Music/modern.tres" id="2_ongjd"]
 [ext_resource type="PackedScene" uid="uid://cy2k4kbb4j6d2" path="res://src/Objects/Seedling.tscn" id="3"]
+[ext_resource type="Script" path="res://src/Levels/Level1.gd" id="3_a6psl"]
 [ext_resource type="Texture2D" uid="uid://cp6sd5oskt8iu" path="res://assets/box_small.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://bxek7obi1oeid" path="res://assets/boulders/boulder_small.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://c8scfxgnvfy8f" path="res://assets/transparent.png" id="6"]
@@ -139,11 +141,14 @@ size = Vector2(13.856, 10)
 
 [node name="level" type="Node2D"]
 position = Vector2(1634, 539)
+script = ExtResource("1_25j8a")
 
 [node name="background_music" type="AudioStreamPlayer" parent="."]
 process_mode = 3
-stream = ExtResource("1")
+stream = ExtResource("2_ongjd")
+volume_db = -18.0
 autoplay = true
+script = ExtResource("3_a6psl")
 
 [node name="background" type="TextureRect" parent="."]
 offset_left = -1907.0

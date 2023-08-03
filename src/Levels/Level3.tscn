@@ -1,6 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://b7y46xbylkehf"]
+[gd_scene load_steps=20 format=3 uid="uid://b7y46xbylkehf"]
 
-[ext_resource type="AudioStream" uid="uid://cb2motminbb0h" path="res://assets/sounds/Game loops 3.wav" id="1"]
+[ext_resource type="AudioStream" uid="uid://ck37un4wvsqef" path="res://src/Music/modern.tres" id="1_mbq3q"]
+[ext_resource type="Script" path="res://src/Levels/Level.gd" id="1_y7l31"]
 [ext_resource type="Texture2D" uid="uid://8amajd1w4338" path="res://assets/backgrounds/ecosia_new.PNG" id="2_mqx6u"]
 [ext_resource type="PackedScene" path="res://src/Objects/DouglasEmitter.tscn" id="3"]
 [ext_resource type="Texture2D" uid="uid://cp6sd5oskt8iu" path="res://assets/box_small.png" id="4"]
@@ -127,10 +128,12 @@ sources/2 = SubResource("TileSetAtlasSource_7m3s0")
 
 [node name="level" type="Node2D"]
 position = Vector2(1634, 539)
+script = ExtResource("1_y7l31")
 
 [node name="background_music" type="AudioStreamPlayer" parent="."]
 process_mode = 3
-stream = ExtResource("1")
+stream = ExtResource("1_mbq3q")
+volume_db = -18.0
 autoplay = true
 
 [node name="background" type="TextureRect" parent="."]
