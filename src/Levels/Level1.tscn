@@ -1,10 +1,9 @@
-[gd_scene load_steps=31 format=3 uid="uid://cr32cu77m4dt5"]
+[gd_scene load_steps=30 format=3 uid="uid://cr32cu77m4dt5"]
 
 [ext_resource type="Script" path="res://src/Levels/Level.gd" id="1_25j8a"]
 [ext_resource type="Texture2D" uid="uid://c4gi647x66xxb" path="res://assets/backgrounds/day_scaled.png" id="2"]
 [ext_resource type="AudioStream" uid="uid://ck37un4wvsqef" path="res://src/Music/modern.tres" id="2_ongjd"]
 [ext_resource type="PackedScene" uid="uid://cy2k4kbb4j6d2" path="res://src/Objects/Seedling.tscn" id="3"]
-[ext_resource type="Script" path="res://src/Levels/Level1.gd" id="3_a6psl"]
 [ext_resource type="Texture2D" uid="uid://cp6sd5oskt8iu" path="res://assets/box_small.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://bxek7obi1oeid" path="res://assets/boulders/boulder_small.png" id="5"]
 [ext_resource type="Texture2D" uid="uid://c8scfxgnvfy8f" path="res://assets/transparent.png" id="6"]
@@ -18,13 +17,13 @@
 [ext_resource type="PackedScene" uid="uid://g2npjb6ck6xb" path="res://src/Levels/Level2.tscn" id="14"]
 [ext_resource type="PackedScene" uid="uid://df5p7k6rwfv84" path="res://src/Objects/Seed.tscn" id="15"]
 [ext_resource type="PackedScene" path="res://src/Triggers/DialogTrigger.tscn" id="16"]
-[ext_resource type="PackedScene" path="res://src/Controllers/DialogController.tscn" id="17"]
+[ext_resource type="PackedScene" uid="uid://ci3kvosujbaj3" path="res://src/Controllers/DialogController.tscn" id="17"]
 [ext_resource type="Texture2D" uid="uid://l0sxlni0op6w" path="res://assets/ui/dialog_rolph_2.png" id="18"]
 [ext_resource type="Texture2D" uid="uid://dva6ahjtor7xw" path="res://assets/ui/dialog_rolph_1.png" id="19"]
 [ext_resource type="Texture2D" uid="uid://cr7lee4kh7it0" path="res://assets/ui/dialog_douglas_2.png" id="20"]
 [ext_resource type="Texture2D" uid="uid://drxsau00vqg47" path="res://assets/ui/dialog_narrator.png" id="21"]
-[ext_resource type="PackedScene" path="res://src/UI/HUD.tscn" id="22"]
-[ext_resource type="PackedScene" path="res://src/UI/GameOver.tscn" id="23"]
+[ext_resource type="PackedScene" uid="uid://d3m8lx153qft6" path="res://src/UI/HUD.tscn" id="22"]
+[ext_resource type="PackedScene" uid="uid://clb4idohun65v" path="res://src/UI/GameOver.tscn" id="23"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mqe3"]
 texture = ExtResource("4")
@@ -148,7 +147,6 @@ process_mode = 3
 stream = ExtResource("2_ongjd")
 volume_db = -18.0
 autoplay = true
-script = ExtResource("3_a6psl")
 
 [node name="background" type="TextureRect" parent="."]
 offset_left = -1907.0
@@ -241,6 +239,7 @@ position = Vector2(7333, -31)
 
 [node name="IntroDialogTrigger" parent="." instance=ExtResource("16")]
 position = Vector2(305, 417)
+scale = Vector2(2, 2)
 dialoge_file_path = "res://data/dialogs/01_intro.json"
 
 [node name="TransitonDialogTrigger" parent="." instance=ExtResource("16")]
@@ -261,7 +260,6 @@ douglas_neutral = ExtResource("20")
 narrator = ExtResource("21")
 
 [node name="HUD" parent="UI" instance=ExtResource("22")]
-anchors_preset = 10
 
 [node name="GameOver" parent="UI" instance=ExtResource("23")]
 visible = false

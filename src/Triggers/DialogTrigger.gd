@@ -7,7 +7,7 @@ extends Area2D
 
 
 func _on_body_entered(body: PhysicsBody2D) -> void:
-	if body.layers != 1:
+	if body.collision_layer != 1:
 		return
 	if !dialoge_file_path in game_controller.triggered_dialogs:
 		start()

@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=2 format=3 uid="uid://djr102msa8abg"]
 
-[ext_resource path="res://src/Objects/DouglasEmitter.gd" type="Script" id=2]
+[ext_resource type="Script" path="res://src/Objects/DouglasEmitter.gd" id="2"]
 
 [node name="DouglasEmitter" type="Node2D"]
-script = ExtResource( 2 )
+script = ExtResource("2")

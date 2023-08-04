@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://dva6ahjtor7xw" path="res://assets/ui/dialog_rolph_1.png" id="19"]
 [ext_resource type="Texture2D" uid="uid://cr7lee4kh7it0" path="res://assets/ui/dialog_douglas_2.png" id="20"]
 [ext_resource type="Texture2D" uid="uid://drxsau00vqg47" path="res://assets/ui/dialog_narrator.png" id="21"]
-[ext_resource type="PackedScene" path="res://src/UI/HUD.tscn" id="22"]
+[ext_resource type="PackedScene" uid="uid://d3m8lx153qft6" path="res://src/UI/HUD.tscn" id="22"]
 [ext_resource type="PackedScene" path="res://src/UI/GameOver.tscn" id="23"]
 [ext_resource type="PackedScene" uid="uid://wvhfvabjykbe" path="res://src/Objects/Fire.tscn" id="24"]
 [ext_resource type="PackedScene" uid="uid://c55cg8snv5urh" path="res://src/Objects/SawTower.tscn" id="25"]
@@ -212,7 +212,6 @@ douglas_neutral = ExtResource("20")
 narrator = ExtResource("21")
 
 [node name="HUD" parent="UI" instance=ExtResource("22")]
-anchors_preset = 10
 
 [node name="GameOver" parent="UI" instance=ExtResource("23")]
 visible = false
