@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://clb4idohun65v"]
 
-[ext_resource type="Texture2D" uid="uid://csy8i5m85afha" path="res://assets/ui/gameover-box.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://cvr17xjo814ul" path="res://assets/ui/gameover-box-alpha.png" id="1_f7i2i"]
 [ext_resource type="FontFile" uid="uid://dqqtp1qfq3mc2" path="res://assets/fonts/inter/Inter-Bold.ttf" id="2_wc6jv"]
 
 [node name="GameOver" type="MarginContainer"]
@@ -11,15 +11,16 @@ anchor_bottom = 0.5
 offset_top = -359.0
 offset_bottom = 359.0
 theme_override_constants/margin_left = 200
-theme_override_constants/margin_top = 200
+theme_override_constants/margin_top = 100
 theme_override_constants/margin_right = 200
+theme_override_constants/margin_bottom = 100
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
 
 [node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer"]
 layout_mode = 2
-texture = ExtResource("1")
+texture = ExtResource("1_f7i2i")
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
 layout_mode = 2

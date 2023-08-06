@@ -30,7 +30,7 @@ func _update_seeds(change: int) -> void:
 
 
 func player_died() -> void:
-	get_tree().paused = true
+	await get_tree().create_timer(0.4).timeout
 	game_over = true
 	var game_over_ui := get_node("/root/level/UI/GameOver")
 	game_over_ui.visible = true

@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://bpvy3xyfq5xu0" path="res://src/Objects/Portal.tscn" id="13"]
 [ext_resource type="PackedScene" uid="uid://g2npjb6ck6xb" path="res://src/Levels/Level2.tscn" id="14"]
 [ext_resource type="PackedScene" uid="uid://df5p7k6rwfv84" path="res://src/Objects/Seed.tscn" id="15"]
-[ext_resource type="PackedScene" path="res://src/Triggers/DialogTrigger.tscn" id="16"]
+[ext_resource type="PackedScene" uid="uid://cku6nlq67dfft" path="res://src/Triggers/DialogTrigger.tscn" id="16"]
 [ext_resource type="PackedScene" uid="uid://ci3kvosujbaj3" path="res://src/Controllers/DialogController.tscn" id="17"]
 [ext_resource type="Texture2D" uid="uid://l0sxlni0op6w" path="res://assets/ui/dialog_rolph_2.png" id="18"]
 [ext_resource type="Texture2D" uid="uid://dva6ahjtor7xw" path="res://assets/ui/dialog_rolph_1.png" id="19"]
@@ -253,7 +253,6 @@ layer = 99
 [node name="DialogController" parent="UI" instance=ExtResource("17")]
 process_mode = 3
 visible = false
-anchors_preset = 12
 rolph_neutral = ExtResource("18")
 rolph_scared = ExtResource("19")
 douglas_neutral = ExtResource("20")
@@ -263,7 +262,6 @@ narrator = ExtResource("21")
 
 [node name="GameOver" parent="UI" instance=ExtResource("23")]
 visible = false
-anchors_preset = 14
 
 [node name="Ground" type="StaticBody2D" parent="."]
 collision_layer = 8

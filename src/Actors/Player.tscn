@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://uk7dbgvocn1n"]
+[gd_scene load_steps=23 format=3 uid="uid://uk7dbgvocn1n"]
 
 [ext_resource type="Script" path="res://src/Actors/Player.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://cmuemdn0nbhao" path="res://assets/rolph/foot.png" id="2"]
@@ -7,6 +7,14 @@
 [ext_resource type="AudioStream" uid="uid://c4k6d8gmsh0n8" path="res://assets/sounds/game-land.wav" id="5"]
 [ext_resource type="AudioStream" uid="uid://bundnnpvtd5ov" path="res://assets/sounds/game-jump2.wav" id="6"]
 [ext_resource type="AudioStream" uid="uid://dj2ywvxgnbjhj" path="res://assets/sounds/game-jump.wav" id="7"]
+[ext_resource type="Texture2D" uid="uid://dhtmyixygnfp1" path="res://assets/rolph/explosion/piece2.png" id="8_8acpt"]
+[ext_resource type="Texture2D" uid="uid://b4t4nxg7ijvad" path="res://assets/rolph/explosion/piece3.png" id="9_3vcww"]
+[ext_resource type="Texture2D" uid="uid://ceu6tla3w52xr" path="res://assets/rolph/explosion/piece4.png" id="10_8w6af"]
+[ext_resource type="Texture2D" uid="uid://bb8dg4iwtndpn" path="res://assets/rolph/explosion/piece1.png" id="11_fbo1c"]
+[ext_resource type="Texture2D" uid="uid://ba6metgi5kfew" path="res://assets/rolph/explosion/piece5.png" id="12_2eqga"]
+[ext_resource type="Texture2D" uid="uid://ctppvt7kf3mov" path="res://assets/rolph/explosion/explosion3.png" id="13_uap44"]
+[ext_resource type="Texture2D" uid="uid://i6op60nuhp6b" path="res://assets/rolph/explosion/explosion2.png" id="14_nle4a"]
+[ext_resource type="Texture2D" uid="uid://cqsu026rpgdn3" path="res://assets/rolph/explosion/explosion1.png" id="15_1hofk"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(79, 86)
@@ -58,6 +66,49 @@ tracks/2/keys = {
 _data = {
 "running": SubResource("3")
 }
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3tqia"]
+particle_flag_disable_z = true
+spread = 180.0
+gravity = Vector3(0, 98, 0)
+initial_velocity_min = 200.0
+initial_velocity_max = 250.0
+angular_velocity_max = 200.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+angle_max = 180.0
+scale_min = 0.1
+scale_max = 0.2
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_0w4sc"]
+particle_flag_disable_z = true
+spread = 180.0
+gravity = Vector3(0, 98, 0)
+initial_velocity_min = 200.0
+initial_velocity_max = 250.0
+angular_velocity_max = 200.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+angle_max = 360.0
+scale_min = 0.05
+scale_max = 0.1
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eqeqb"]
+animations = [{
+"frames": [{
+"duration": 0.5,
+"texture": ExtResource("13_uap44")
+}, {
+"duration": 0.5,
+"texture": ExtResource("14_nle4a")
+}, {
+"duration": 0.5,
+"texture": ExtResource("15_1hofk")
+}],
+"loop": false,
+"name": &"default",
+"speed": 6.0
+}]
 
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 8
@@ -121,6 +172,63 @@ attenuation = 0.00515433
 
 [node name="hit_sound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7")
+
+[node name="Explosion" type="Node2D" parent="."]
+
+[node name="Sticks2" type="GPUParticles2D" parent="Explosion" groups=["explosion_emitter"]]
+emitting = false
+amount = 6
+process_material = SubResource("ParticleProcessMaterial_3tqia")
+texture = ExtResource("8_8acpt")
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.5
+randomness = 0.1
+
+[node name="Sticks3" type="GPUParticles2D" parent="Explosion" groups=["explosion_emitter"]]
+emitting = false
+amount = 6
+process_material = SubResource("ParticleProcessMaterial_3tqia")
+texture = ExtResource("9_3vcww")
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.5
+randomness = 0.1
+
+[node name="Sticks4" type="GPUParticles2D" parent="Explosion" groups=["explosion_emitter"]]
+emitting = false
+amount = 6
+process_material = SubResource("ParticleProcessMaterial_3tqia")
+texture = ExtResource("10_8w6af")
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.5
+randomness = 0.1
+
+[node name="Sticks1" type="GPUParticles2D" parent="Explosion" groups=["explosion_emitter"]]
+emitting = false
+amount = 6
+process_material = SubResource("ParticleProcessMaterial_3tqia")
+texture = ExtResource("11_fbo1c")
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.5
+randomness = 0.1
+
+[node name="Leaves" type="GPUParticles2D" parent="Explosion" groups=["explosion_emitter"]]
+emitting = false
+amount = 12
+process_material = SubResource("ParticleProcessMaterial_0w4sc")
+texture = ExtResource("12_2eqga")
+lifetime = 4.0
+one_shot = true
+explosiveness = 0.5
+randomness = 0.1
+
+[node name="Smoke" type="AnimatedSprite2D" parent="Explosion"]
+visible = false
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_eqeqb")
 
 [connection signal="area_entered" from="EnemyDetector" to="." method="_on_EnemyDetector_area_entered"]
 [connection signal="body_entered" from="EnemyDetector" to="." method="_on_EnemyDetector_body_entered"]
