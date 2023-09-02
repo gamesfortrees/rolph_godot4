@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bi046l0qxw11p" path="res://assets/enemies/saw_arm.png" id="3"]
 
 [sub_resource type="CircleShape2D" id="1"]
-radius = 377.915
+radius = 343.862
 
 [sub_resource type="Animation" id="2"]
 resource_name = "Rotate"

@@ -1,9 +1,5 @@
-res://src/Objects/DouglasEmitter.gd
-res://src/Triggers/DialogTrigger.gd
+res://src/Objects/SawTower.tscn
 res://src/Actors/Player.tscn
-res://src/Actors/Player.gd
-res://src/Controllers/GameController.gd
-res://src/Actors/Chaser.gd
 res://src/Levels/Level1.tscn
 res://src/Levels/Level2.tscn
 res://src/UI/GameOver.tscn
