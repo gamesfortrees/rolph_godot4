@@ -1,5 +1,14 @@
-res://src/Objects/SawTower.tscn
-res://src/Actors/Player.tscn
 res://src/Levels/Level1.tscn
+res://src/Controllers/DialogController.tscn
+res://src/Levels/TestLevel.tscn
+res://src/Actors/Player.gd
+res://src/Actors/Actor.gd
+res://src/Actors/Player.tscn
+res://src/Actors/PlayerNew.gd
+res://src/Actors/player.gd
 res://src/Levels/Level2.tscn
-res://src/UI/GameOver.tscn
+res://src/Levels/Level3.tscn
+res://src/Actors/Steve.tscn
+res://src/Music/legacy.tres
+res://src/Levels/Level.gd
+res://default_bus_layout.tres

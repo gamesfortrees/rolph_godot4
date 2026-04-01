@@ -1,8 +1,8 @@
-[gd_scene load_steps=32 format=3 uid="uid://g2npjb6ck6xb"]
+[gd_scene format=4 uid="uid://g2npjb6ck6xb"]
 
-[ext_resource type="Script" path="res://src/Levels/Level.gd" id="1_x2m5m"]
+[ext_resource type="Script" uid="uid://wjkl7p4qawwi" path="res://src/Levels/Level.gd" id="1_x2m5m"]
 [ext_resource type="Texture2D" uid="uid://cuowpvg2egd7l" path="res://assets/backgrounds/night_scaled.png" id="2"]
-[ext_resource type="AudioStream" uid="uid://ck37un4wvsqef" path="res://src/Music/modern.tres" id="2_bxyhj"]
+[ext_resource type="AudioStream" uid="uid://clf41gj28jx8g" path="res://assets/sounds/game loop moden.wav" id="2_1g5dj"]
 [ext_resource type="PackedScene" uid="uid://cy2k4kbb4j6d2" path="res://src/Objects/Seedling.tscn" id="3"]
 [ext_resource type="Texture2D" uid="uid://cp6sd5oskt8iu" path="res://assets/box_small.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://bxek7obi1oeid" path="res://assets/boulders/boulder_small.png" id="5"]
@@ -32,48 +32,32 @@ texture = ExtResource("4")
 texture_region_size = Vector2i(74, 80)
 0:0/next_alternative_id = 8
 0:0/0 = 0
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/angular_velocity = 0.0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-37, -40, 37, -40, 37, 40, -37, 40)
 0:0/1 = 1
 0:0/1/flip_h = true
-0:0/1/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/1/physics_layer_0/angular_velocity = 0.0
 0:0/1/physics_layer_0/polygon_0/points = PackedVector2Array(37, -40, -37, -40, -37, 40, 37, 40)
 0:0/2 = 2
 0:0/2/flip_v = true
-0:0/2/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/2/physics_layer_0/angular_velocity = 0.0
 0:0/2/physics_layer_0/polygon_0/points = PackedVector2Array(-37, 40, 37, 40, 37, -40, -37, -40)
 0:0/3 = 3
 0:0/3/flip_h = true
 0:0/3/flip_v = true
-0:0/3/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/3/physics_layer_0/angular_velocity = 0.0
 0:0/3/physics_layer_0/polygon_0/points = PackedVector2Array(37, 40, -37, 40, -37, -40, 37, -40)
 0:0/4 = 4
 0:0/4/transpose = true
-0:0/4/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/4/physics_layer_0/angular_velocity = 0.0
 0:0/4/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -37, -40, 37, 40, 37, 40, -37)
 0:0/5 = 5
 0:0/5/flip_h = true
 0:0/5/transpose = true
-0:0/5/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/5/physics_layer_0/angular_velocity = 0.0
 0:0/5/physics_layer_0/polygon_0/points = PackedVector2Array(40, -37, 40, 37, -40, 37, -40, -37)
 0:0/6 = 6
 0:0/6/flip_v = true
 0:0/6/transpose = true
-0:0/6/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/6/physics_layer_0/angular_velocity = 0.0
 0:0/6/physics_layer_0/polygon_0/points = PackedVector2Array(-40, 37, -40, -37, 40, -37, 40, 37)
 0:0/7 = 7
 0:0/7/flip_h = true
 0:0/7/flip_v = true
 0:0/7/transpose = true
-0:0/7/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/7/physics_layer_0/angular_velocity = 0.0
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(40, 37, 40, -37, -40, -37, -40, 37)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vnxq0"]
@@ -85,53 +69,37 @@ texture = ExtResource("6")
 texture_region_size = Vector2i(74, 80)
 0:0/next_alternative_id = 8
 0:0/0 = 0
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/angular_velocity = 0.0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-37, -40, 37, -40, 37, 40, -37, 40)
 0:0/1 = 1
 0:0/1/flip_h = true
-0:0/1/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/1/physics_layer_0/angular_velocity = 0.0
 0:0/1/physics_layer_0/polygon_0/points = PackedVector2Array(37, -40, -37, -40, -37, 40, 37, 40)
 0:0/2 = 2
 0:0/2/flip_v = true
-0:0/2/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/2/physics_layer_0/angular_velocity = 0.0
 0:0/2/physics_layer_0/polygon_0/points = PackedVector2Array(-37, 40, 37, 40, 37, -40, -37, -40)
 0:0/3 = 3
 0:0/3/flip_h = true
 0:0/3/flip_v = true
-0:0/3/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/3/physics_layer_0/angular_velocity = 0.0
 0:0/3/physics_layer_0/polygon_0/points = PackedVector2Array(37, 40, -37, 40, -37, -40, 37, -40)
 0:0/4 = 4
 0:0/4/transpose = true
-0:0/4/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/4/physics_layer_0/angular_velocity = 0.0
 0:0/4/physics_layer_0/polygon_0/points = PackedVector2Array(-40, -37, -40, 37, 40, 37, 40, -37)
 0:0/5 = 5
 0:0/5/flip_h = true
 0:0/5/transpose = true
-0:0/5/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/5/physics_layer_0/angular_velocity = 0.0
 0:0/5/physics_layer_0/polygon_0/points = PackedVector2Array(40, -37, 40, 37, -40, 37, -40, -37)
 0:0/6 = 6
 0:0/6/flip_v = true
 0:0/6/transpose = true
-0:0/6/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/6/physics_layer_0/angular_velocity = 0.0
 0:0/6/physics_layer_0/polygon_0/points = PackedVector2Array(-40, 37, -40, -37, 40, -37, 40, 37)
 0:0/7 = 7
 0:0/7/flip_h = true
 0:0/7/flip_v = true
 0:0/7/transpose = true
-0:0/7/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/7/physics_layer_0/angular_velocity = 0.0
 0:0/7/physics_layer_0/polygon_0/points = PackedVector2Array(40, 37, 40, -37, -40, -37, -40, 37)
 
 [sub_resource type="TileSet" id="4"]
 tile_size = Vector2i(74, 80)
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 8
 sources/0 = SubResource("TileSetAtlasSource_2puo6")
 sources/1 = SubResource("TileSetAtlasSource_vnxq0")
 sources/2 = SubResource("TileSetAtlasSource_7uth2")
@@ -139,17 +107,18 @@ sources/2 = SubResource("TileSetAtlasSource_7uth2")
 [sub_resource type="RectangleShape2D" id="5"]
 size = Vector2(13.856, 10)
 
-[node name="level" type="Node2D"]
+[node name="level" type="Node2D" unique_id=1306663400]
 position = Vector2(1634, 539)
 script = ExtResource("1_x2m5m")
 
-[node name="background_music" type="AudioStreamPlayer" parent="."]
+[node name="background_music" type="AudioStreamPlayer" parent="." unique_id=841508750]
 process_mode = 3
-stream = ExtResource("2_bxyhj")
+stream = ExtResource("2_1g5dj")
 volume_db = -18.0
 autoplay = true
+bus = &"Music"
 
-[node name="background" type="TextureRect" parent="."]
+[node name="background" type="TextureRect" parent="." unique_id=765452301]
 offset_left = -1907.0
 offset_top = -998.0
 offset_right = 13845.0
@@ -157,52 +126,52 @@ offset_bottom = 640.0
 texture = ExtResource("2")
 stretch_mode = 1
 
-[node name="Seedling" parent="." instance=ExtResource("3")]
+[node name="Seedling" parent="." unique_id=1364046396 instance=ExtResource("3")]
 position = Vector2(2589, 483)
 scale = Vector2(0.7, 0.7)
 
-[node name="Seedling5" parent="." instance=ExtResource("3")]
+[node name="Seedling5" parent="." unique_id=677673287 instance=ExtResource("3")]
 position = Vector2(2862, 483)
 scale = Vector2(0.7, 0.7)
 
-[node name="Seedling6" parent="." instance=ExtResource("3")]
+[node name="Seedling6" parent="." unique_id=2037253247 instance=ExtResource("3")]
 position = Vector2(8212, 483)
 scale = Vector2(0.7, 0.7)
 
-[node name="SawTower" parent="." instance=ExtResource("25")]
+[node name="SawTower" parent="." unique_id=1944311138 instance=ExtResource("25")]
 position = Vector2(9396, 205)
 scale = Vector2(0.3, 0.3)
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="Layer0" type="TileMapLayer" parent="." unique_id=100985805]
+use_parent_material = true
+tile_map_data = PackedByteArray("AACwAPP/AAAAAAAAAADq//T/AAAAAAAAAACwAPT/AAAAAAAAAADq//X/AAAAAAAAAACwAPX/AAAAAAAAAADq//b/AAAAAAAAAACwAPb/AAAAAAAAAADq//f/AAAAAAAAAACwAPf/AAAAAAAAAADq//j/AAAAAAAAAACwAPj/AAAAAAAAAADq//n/AAAAAAAAAACwAPn/AAAAAAAAAADq//r/AAAAAAAAAACwAPr/AAAAAAAAAADq//v/AAAAAAAAAACwAPv/AAAAAAAAAADq//z/AAAAAAAAAACwAPz/AAAAAAAAAADq//3/AAAAAAAAAACwAP3/AAAAAAAAAADq//7/AAAAAAAAAACwAP7/AAAAAAAAAADq////AAAAAAAAAACwAP//AAAAAAAAAADq/wAAAAAAAAAAAACwAAAAAAAAAAAAAADq/wEAAAAAAAAAAACwAAEAAAAAAAAAAADq/wIAAAAAAAAAAACwAAIAAAAAAAAAAADq/wMAAAAAAAAAAACwAAMAAAAAAAAAAADq/wQAAAAAAAAAAACwAAQAAAAAAAAAAADq/wUAAAAAAAAAAACwAAUAAAAAAAAAAAA=")
 tile_set = SubResource("4")
-format = 2
-layer_0/tile_data = PackedInt32Array(-851792, 0, 0, -720918, 0, 0, -786256, 0, 0, -655382, 0, 0, -720720, 0, 0, -589846, 0, 0, -655184, 0, 0, -524310, 0, 0, -589648, 0, 0, -458774, 0, 0, -524112, 0, 0, -393238, 0, 0, -458576, 0, 0, -327702, 0, 0, -393040, 0, 0, -262166, 0, 0, -327504, 0, 0, -196630, 0, 0, -261968, 0, 0, -131094, 0, 0, -196432, 0, 0, -65558, 0, 0, -130896, 0, 0, -22, 0, 0, -65360, 0, 0, 65514, 0, 0, 176, 0, 0, 131050, 0, 0, 65712, 0, 0, 196586, 0, 0, 131248, 0, 0, 262122, 0, 0, 196784, 0, 0, 327658, 0, 0, 262320, 0, 0, 393194, 0, 0, 327856, 0, 0)
 
-[node name="Scaffolding" parent="." instance=ExtResource("10")]
+[node name="Scaffolding" parent="." unique_id=1522328638 instance=ExtResource("10")]
 position = Vector2(3697, 238)
 
-[node name="Scaffolding5" parent="." instance=ExtResource("10")]
+[node name="Scaffolding5" parent="." unique_id=361503442 instance=ExtResource("10")]
 position = Vector2(3987, 238)
 
-[node name="Scaffolding6" parent="." instance=ExtResource("10")]
+[node name="Scaffolding6" parent="." unique_id=1423354554 instance=ExtResource("10")]
 position = Vector2(4274, 238)
 
-[node name="Scaffolding7" parent="." instance=ExtResource("10")]
+[node name="Scaffolding7" parent="." unique_id=1567238249 instance=ExtResource("10")]
 position = Vector2(4776, 238)
 
-[node name="Seed2" parent="." instance=ExtResource("15")]
+[node name="Seed2" parent="." unique_id=719421833 instance=ExtResource("15")]
 position = Vector2(1415, 298)
 
-[node name="Seed3" parent="." instance=ExtResource("15")]
+[node name="Seed3" parent="." unique_id=914109352 instance=ExtResource("15")]
 position = Vector2(1851, 418)
 
-[node name="Seed4" parent="." instance=ExtResource("15")]
+[node name="Seed4" parent="." unique_id=415245420 instance=ExtResource("15")]
 position = Vector2(7570, 180)
 
-[node name="UI" type="CanvasLayer" parent="."]
+[node name="UI" type="CanvasLayer" parent="." unique_id=2006843235]
 layer = 99
 
-[node name="DialogController" parent="UI" instance=ExtResource("17")]
+[node name="DialogController" parent="UI" unique_id=619239575 instance=ExtResource("17")]
 process_mode = 3
 visible = false
 rolph_neutral = ExtResource("18")
@@ -210,80 +179,80 @@ rolph_scared = ExtResource("19")
 douglas_neutral = ExtResource("20")
 narrator = ExtResource("21")
 
-[node name="HUD" parent="UI" instance=ExtResource("22")]
+[node name="HUD" parent="UI" unique_id=1756931356 instance=ExtResource("22")]
 
-[node name="GameOver" parent="UI" instance=ExtResource("23")]
+[node name="GameOver" parent="UI" unique_id=289136216 instance=ExtResource("23")]
 visible = false
 
-[node name="Ground" type="StaticBody2D" parent="."]
+[node name="Ground" type="StaticBody2D" parent="." unique_id=1437735293]
 collision_layer = 8
 collision_mask = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=1295569867]
 modulate = Color(0, 0, 0, 1)
 position = Vector2(0, 491)
 scale = Vector2(2000, 2)
 shape = SubResource("5")
 
-[node name="Fire" parent="." instance=ExtResource("24")]
+[node name="Fire" parent="." unique_id=1532161521 instance=ExtResource("24")]
 position = Vector2(2271, 410)
 
-[node name="Chaser" parent="." instance=ExtResource("9")]
+[node name="Chaser" parent="." unique_id=178642397 instance=ExtResource("9")]
 position = Vector2(-740, 299)
 scale = Vector2(0.5, 0.5)
 max_speed = Vector2(500, 0)
 
-[node name="DarkBoulder2" parent="." instance=ExtResource("26")]
+[node name="DarkBoulder2" parent="." unique_id=1980281762 instance=ExtResource("26")]
 position = Vector2(1353, 430)
 scale = Vector2(0.1, 0.1)
 
-[node name="DarkBoulder3" parent="." instance=ExtResource("26")]
+[node name="DarkBoulder3" parent="." unique_id=1987537138 instance=ExtResource("26")]
 position = Vector2(3314, 430)
 scale = Vector2(0.1, 0.1)
 
-[node name="DarkBoulder5" parent="." instance=ExtResource("26")]
+[node name="DarkBoulder5" parent="." unique_id=1209275669 instance=ExtResource("26")]
 position = Vector2(5887, 314)
 scale = Vector2(0.3, 0.3)
 
-[node name="DarkBoulder" parent="." instance=ExtResource("27")]
+[node name="DarkBoulder" parent="." unique_id=2129762005 instance=ExtResource("27")]
 position = Vector2(950, 452)
 scale = Vector2(0.1, 0.1)
 
-[node name="DarkBoulder4" parent="." instance=ExtResource("27")]
+[node name="DarkBoulder4" parent="." unique_id=414891886 instance=ExtResource("27")]
 position = Vector2(4538, 422)
 scale = Vector2(0.2, 0.2)
 
-[node name="Fire2" parent="." instance=ExtResource("24")]
+[node name="Fire2" parent="." unique_id=893164234 instance=ExtResource("24")]
 position = Vector2(4536, 215)
 scale = Vector2(2, 2)
 
-[node name="Box2" parent="." instance=ExtResource("11")]
+[node name="Box2" parent="." unique_id=736313719 instance=ExtResource("11")]
 position = Vector2(7573, 377)
 scale = Vector2(3, 3)
 
-[node name="Box3" parent="." instance=ExtResource("11")]
+[node name="Box3" parent="." unique_id=1427006490 instance=ExtResource("11")]
 position = Vector2(10663, 377)
 scale = Vector2(3, 3)
 
-[node name="Box4" parent="." instance=ExtResource("11")]
+[node name="Box4" parent="." unique_id=1640565842 instance=ExtResource("11")]
 position = Vector2(10882, 377)
 scale = Vector2(3, 3)
 
-[node name="TransitonDialogTrigger" parent="." instance=ExtResource("16")]
+[node name="TransitonDialogTrigger" parent="." unique_id=35421697 instance=ExtResource("16")]
 position = Vector2(11742, -194)
 scale = Vector2(5, 60)
 dialoge_file_path = "res://data/dialogs/02_transition.json"
 
-[node name="Box5" parent="." instance=ExtResource("11")]
+[node name="Box5" parent="." unique_id=2046888652 instance=ExtResource("11")]
 position = Vector2(10786, 153)
 scale = Vector2(3, 3)
 
-[node name="Fire3" parent="." instance=ExtResource("24")]
+[node name="Fire3" parent="." unique_id=349220700 instance=ExtResource("24")]
 position = Vector2(7145, 414)
 
-[node name="Portal" parent="." instance=ExtResource("7")]
+[node name="Portal" parent="." unique_id=1789205192 instance=ExtResource("7")]
 position = Vector2(12482, 481)
 next_scene = ExtResource("8")
 
-[node name="Player" parent="." instance=ExtResource("12")]
+[node name="Player" parent="." unique_id=92453666 instance=ExtResource("12")]
 position = Vector2(302, 301)

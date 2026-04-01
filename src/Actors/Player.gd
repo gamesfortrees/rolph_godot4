@@ -49,8 +49,8 @@ func swap_face() -> void:
 
 func animate(x_speed: float) -> void:
 	if x_speed == 0.0:
-		anim_player.stop()
-	else:
+		anim_player.pause()
+	elif not anim_player.is_playing():
 		anim_player.play("running")
 
 
@@ -64,13 +64,13 @@ func flip(x_speed: float) -> void:
 			facing = 1
 
 
-func _on_EnemyDetector_area_entered(_area: Area2D) -> void:
+func _on_enemy_detector_area_entered(_area: Area2D) -> void:
 	pass
 	# _velocity = calculate_stomp_velocity(_velocity, stomp_impulse)
 	# hit_sound.play()
 
 
-func _on_EnemyDetector_body_entered(_body: PhysicsBody2D) -> void:
+func _on_enemy_detector_body_entered(_body: PhysicsBody2D) -> void:
 	dead = true
 	for emitter in get_tree().get_nodes_in_group("explosion_emitter"):
 		emitter.emitting = true
@@ -91,7 +91,10 @@ func get_direction() -> Vector2:
 
 
 func calculate_velocity(
-	linear_velocity: Vector2, direction: Vector2, speed: Vector2, is_jump_interruped: bool
+		linear_velocity: Vector2,
+		direction: Vector2,
+		speed: Vector2,
+		is_jump_interruped: bool,
 ) -> Vector2:
 	var new_velocity := linear_velocity
 	new_velocity.x = speed.x * direction.x

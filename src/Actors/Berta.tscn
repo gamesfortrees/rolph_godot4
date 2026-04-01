@@ -1,6 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://ce0ftkg06hawr"]
+[gd_scene format=3 uid="uid://ce0ftkg06hawr"]
 
-[ext_resource type="Script" path="res://src/Actors/Chaser.gd" id="1"]
+[ext_resource type="Script" uid="uid://d3d12bif0e4la" path="res://src/Actors/Chaser.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://ouwpv4wo2vha" path="res://assets/enemies/machine-big 1.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://mjqbd6g50nu8" path="res://assets/enemies/saw_blade.png" id="3"]
 
@@ -27,7 +27,7 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qqnil"]
 _data = {
-"vibrate": SubResource("2")
+&"vibrate": SubResource("2")
 }
 
 [sub_resource type="Animation" id="3"]
@@ -49,39 +49,35 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_cxo28"]
 _data = {
-"Saw": SubResource("3")
+&"Saw": SubResource("3")
 }
 
-[node name="Chaser" type="CharacterBody2D"]
+[node name="Chaser" type="CharacterBody2D" unique_id=783159491]
 collision_layer = 2
 script = ExtResource("1")
 max_speed = Vector2(200, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1588163292]
 position = Vector2(11, -143)
 shape = SubResource("1")
 
-[node name="Machine" type="Node2D" parent="."]
+[node name="Machine" type="Node2D" parent="." unique_id=739645048]
 position = Vector2(0, -10.2775)
 
-[node name="machine-big 1" type="Sprite2D" parent="Machine"]
+[node name="machine-big 1" type="Sprite2D" parent="Machine" unique_id=691259767]
 position = Vector2(-31, -163)
 scale = Vector2(0.823489, 0.823489)
 texture = ExtResource("2")
 
-[node name="saw_blade" type="Sprite2D" parent="Machine"]
+[node name="saw_blade" type="Sprite2D" parent="Machine" unique_id=2052943837]
 position = Vector2(463, 33)
 rotation = 4.39645
 texture = ExtResource("3")
 
-[node name="VibrationAnimation" type="AnimationPlayer" parent="."]
-autoplay = "vibrate"
-libraries = {
-"": SubResource("AnimationLibrary_qqnil")
-}
+[node name="VibrationAnimation" type="AnimationPlayer" parent="." unique_id=1199946103]
+libraries/ = SubResource("AnimationLibrary_qqnil")
+autoplay = &"vibrate"
 
-[node name="SawAnimation" type="AnimationPlayer" parent="."]
-autoplay = "Saw"
-libraries = {
-"": SubResource("AnimationLibrary_cxo28")
-}
+[node name="SawAnimation" type="AnimationPlayer" parent="." unique_id=1564483445]
+libraries/ = SubResource("AnimationLibrary_cxo28")
+autoplay = &"Saw"

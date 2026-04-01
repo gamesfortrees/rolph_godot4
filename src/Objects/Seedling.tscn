@@ -1,26 +1,26 @@
-[gd_scene load_steps=5 format=3 uid="uid://cy2k4kbb4j6d2"]
+[gd_scene format=3 uid="uid://cy2k4kbb4j6d2"]
 
-[ext_resource type="Script" path="res://src/Objects/Seedling.gd" id="1"]
+[ext_resource type="Script" uid="uid://dwlru5u4s17yg" path="res://src/Objects/Seedling.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://gt4af82umr7k" path="res://assets/soil.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://c8b54sdnrtuq1" path="res://assets/plant.png" id="3"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(246, 451)
 
-[node name="Seedling" type="Area2D"]
+[node name="Seedling" type="Area2D" unique_id=520967840]
 collision_layer = 16
 collision_mask = 3
 script = ExtResource("1")
 
-[node name="soil" type="Sprite2D" parent="."]
+[node name="soil" type="Sprite2D" parent="." unique_id=628582943]
 texture = ExtResource("2")
 
-[node name="plant" type="Sprite2D" parent="."]
+[node name="plant" type="Sprite2D" parent="." unique_id=719220114]
 visible = false
 position = Vector2(-1, -204)
 texture = ExtResource("3")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=188512345]
 position = Vector2(3, -204.5)
 shape = SubResource("1")
 

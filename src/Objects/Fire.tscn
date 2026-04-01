@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://wvhfvabjykbe"]
+[gd_scene format=3 uid="uid://wvhfvabjykbe"]
 
 [ext_resource type="Texture2D" uid="uid://cloetaqmij4bf" path="res://assets/enemies/fire3.png" id="1"]
 [ext_resource type="Texture2D" uid="uid://bed0xlihpum6y" path="res://assets/enemies/fire2.png" id="2"]
@@ -27,21 +27,21 @@ size = Vector2(97, 71)
 [sub_resource type="RectangleShape2D" id="3"]
 size = Vector2(61, 45)
 
-[node name="Fire" type="StaticBody2D"]
+[node name="Fire" type="StaticBody2D" unique_id=1134341550]
 collision_layer = 2
 collision_mask = 0
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2034350097]
 position = Vector2(0, 14)
 sprite_frames = SubResource("1")
 autoplay = "default"
 frame = 2
 frame_progress = 0.895624
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=592519837]
 position = Vector2(1.5, 29.5)
 shape = SubResource("2")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1943793050]
 position = Vector2(5.5, -27.5)
 shape = SubResource("3")

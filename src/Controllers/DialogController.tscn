@@ -1,13 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://ci3kvosujbaj3"]
+[gd_scene format=3 uid="uid://ci3kvosujbaj3"]
 
-[ext_resource type="Script" path="res://src/Controllers/DialogController.gd" id="1"]
+[ext_resource type="Script" uid="uid://wy3f0ufb2m5s" path="res://src/Controllers/DialogController.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://cr7lee4kh7it0" path="res://assets/ui/dialog_douglas_2.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://l0sxlni0op6w" path="res://assets/ui/dialog_rolph_2.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://shv0l6u8nlg0" path="res://assets/ui/dialog_douglas_1.png" id="4"]
 [ext_resource type="Texture2D" uid="uid://cdb7n3qf4uncc" path="res://assets/ui/dialog_background.png" id="5"]
 [ext_resource type="FontFile" uid="uid://cxau17ln6opup" path="res://assets/fonts/inter/Inter-Regular.ttf" id="6_abwu4"]
 
-[node name="DialogController" type="MarginContainer"]
+[node name="DialogController" type="MarginContainer" unique_id=1408798362]
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
@@ -22,36 +22,37 @@ rolph_neutral = ExtResource("2")
 douglas_neutral = ExtResource("3")
 douglas_angry = ExtResource("4")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1173224135]
 layout_mode = 2
 
-[node name="background" type="NinePatchRect" parent="MarginContainer"]
+[node name="background" type="NinePatchRect" parent="MarginContainer" unique_id=1040960574]
 layout_mode = 2
 texture = ExtResource("5")
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer" unique_id=1985036320]
 layout_mode = 2
 theme_override_constants/margin_left = 50
 theme_override_constants/margin_right = 50
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/MarginContainer" unique_id=698218484]
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MarginContainer/HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MarginContainer/HBoxContainer" unique_id=386499137]
 layout_mode = 2
 theme_override_constants/margin_right = 20
 
-[node name="avatar" type="TextureRect" parent="MarginContainer/MarginContainer/HBoxContainer/MarginContainer"]
+[node name="avatar" type="TextureRect" parent="MarginContainer/MarginContainer/HBoxContainer/MarginContainer" unique_id=1228824358]
 layout_mode = 2
 texture = ExtResource("4")
 
-[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/MarginContainer/HBoxContainer"]
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer/MarginContainer/HBoxContainer" unique_id=472979106]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/margin_right = 20
 
-[node name="text" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer/MarginContainer2"]
+[node name="text" type="Label" parent="MarginContainer/MarginContainer/HBoxContainer/MarginContainer2" unique_id=1746036251]
+custom_minimum_size = Vector2(1300, 150)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0

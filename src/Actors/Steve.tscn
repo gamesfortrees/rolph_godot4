@@ -1,6 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://bh2h6i8c0o1yp"]
+[gd_scene format=3 uid="uid://bh2h6i8c0o1yp"]
 
-[ext_resource type="Script" path="res://src/Actors/Chaser.gd" id="1"]
+[ext_resource type="Script" uid="uid://d3d12bif0e4la" path="res://src/Actors/Chaser.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://t85g0td68jwi" path="res://assets/enemies/machine-arm.png" id="2"]
 [ext_resource type="Texture2D" uid="uid://boyx88n2lbtos" path="res://assets/enemies/machine-arm-2.png" id="3"]
 [ext_resource type="Texture2D" uid="uid://uth5g37px5vu" path="res://assets/enemies/machine-small 1.png" id="4"]
@@ -63,7 +63,7 @@ tracks/3/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_m80h0"]
 _data = {
-"shovel": SubResource("2")
+&"shovel": SubResource("2")
 }
 
 [sub_resource type="Animation" id="3"]
@@ -86,42 +86,39 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gstjm"]
 _data = {
-"vibrate": SubResource("3")
+&"vibrate": SubResource("3")
 }
 
-[node name="Chaser" type="CharacterBody2D"]
+[node name="Chaser" type="CharacterBody2D" unique_id=1486900713]
+z_index = 10
 collision_layer = 2
 script = ExtResource("1")
 max_speed = Vector2(200, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1223941619]
 position = Vector2(-37.5, -176)
 shape = SubResource("1")
 
-[node name="Machine" type="Node2D" parent="."]
+[node name="Machine" type="Node2D" parent="." unique_id=1958658658]
 position = Vector2(0, 10.3606)
 
-[node name="machine-arm" type="Sprite2D" parent="Machine"]
+[node name="machine-arm" type="Sprite2D" parent="Machine" unique_id=476256520]
 position = Vector2(223.802, -319.43)
 rotation = -0.374492
 texture = ExtResource("2")
 
-[node name="machine-arm-2" type="Sprite2D" parent="Machine"]
+[node name="machine-arm-2" type="Sprite2D" parent="Machine" unique_id=1407956346]
 position = Vector2(579.092, -150.992)
 rotation = -0.936229
 texture = ExtResource("3")
 
-[node name="machine-small 1" type="Sprite2D" parent="Machine"]
+[node name="machine-small 1" type="Sprite2D" parent="Machine" unique_id=888488518]
 position = Vector2(-126, 35)
 texture = ExtResource("4")
 
-[node name="ShovelAnimation" type="AnimationPlayer" parent="."]
-autoplay = "shovel"
-libraries = {
-"": SubResource("AnimationLibrary_m80h0")
-}
+[node name="ShovelAnimation" type="AnimationPlayer" parent="." unique_id=415821541]
+libraries/ = SubResource("AnimationLibrary_m80h0")
+autoplay = &"shovel"
 
-[node name="VibrationAnimation" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_gstjm")
-}
+[node name="VibrationAnimation" type="AnimationPlayer" parent="." unique_id=651227898]
+libraries/ = SubResource("AnimationLibrary_gstjm")

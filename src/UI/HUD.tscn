@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://d3m8lx153qft6"]
+[gd_scene format=3 uid="uid://d3m8lx153qft6"]
 
 [ext_resource type="FontFile" uid="uid://dqqtp1qfq3mc2" path="res://assets/fonts/inter/Inter-Bold.ttf" id="1_4p43x"]
 [ext_resource type="Texture2D" uid="uid://cmn1q77tywg57" path="res://assets/seed icon.png" id="2"]
 
-[node name="HUD" type="MarginContainer"]
+[node name="HUD" type="MarginContainer" unique_id=8657571]
 anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 229.0
@@ -12,21 +12,21 @@ theme_override_constants/margin_top = 80
 theme_override_constants/margin_right = 120
 theme_override_constants/margin_bottom = 80
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=298147269]
 layout_mode = 2
 alignment = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer" unique_id=810914740]
 layout_mode = 2
 theme_override_constants/margin_right = 10
 
-[node name="count" type="Label" parent="HBoxContainer/MarginContainer"]
+[node name="count" type="Label" parent="HBoxContainer/MarginContainer" unique_id=197261180]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 0.654902)
 theme_override_fonts/font = ExtResource("1_4p43x")
 theme_override_font_sizes/font_size = 30
 text = "0"
 
-[node name="seed icon" type="TextureRect" parent="HBoxContainer"]
+[node name="seed icon" type="TextureRect" parent="HBoxContainer" unique_id=1618634776]
 layout_mode = 2
 texture = ExtResource("2")
